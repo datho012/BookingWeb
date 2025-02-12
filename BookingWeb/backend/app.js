@@ -46,10 +46,8 @@ app.use("/api/hotels", hotelsRoute);
 app.use("/api/favorites", favoriteRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
-app.use("/api/payment", paymentRoute);
 app.use("/api/rooms", roomRoute);
 app.use("/api/booking", bookingRoute);
-app.use("/api/vnpay", vnpayRouter);
 app.use("/api/reviews", reviewRoutes);
 app.use("/api/search", searchRoute);
 
