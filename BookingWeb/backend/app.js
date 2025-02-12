@@ -38,32 +38,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // view engine setup
 
-// Khai báo thông tin từ VNPAY
-const vnp_TmnCode = "C2H561UO";
-const vnp_HashSecret = "EAKYVDEODUQGZSMDEHPDLXZOUECKUMGS";
-const vnp_ReturnUrl = "http://localhost:5000/payment-return";
-
-// app.post("/create-payment-url", async (req, res) => {
-//   const vnpay = new vnPay(vnp_TmnCode, vnp_HashSecret);
-//   const paymentData = {
-//     vnp_Amount: 100000, // Số tiền thanh toán (đơn vị: VND)
-//     vnp_Command: "pay",
-//     vnp_CreateDate: new Date().toISOString(),
-//     vnp_CurrCode: "VND",
-//     vnp_IpAddr: req.ip,
-//     vnp_Locale: "vn",
-//     vnp_OrderInfo: "Thanh toan don hang",
-//     vnp_OrderType: "billpayment",
-//     vnp_ReturnUrl: vnp_ReturnUrl,
-//     vnp_TmnCode: vnp_TmnCode,
-//     vnp_TxnRef: "123_" + new Date().getTime(),
-//     vnp_Version: "2.0.0",
-//   };
-
-//   const url = await vnpay.buildPaymentURL(paymentData);
-
-//   res.json({ paymentUrl: url });
-// });
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
